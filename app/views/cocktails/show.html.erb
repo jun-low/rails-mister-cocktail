@@ -1,0 +1,16 @@
+<div class="card-container">
+      <% @cocktail.each do |cocktail| %>
+        <div class="card-trip">
+          <img src="https://source.unsplash.com/1600x900/?cocktail&rand=<%= rand( 9999) %>" />
+          <div class="card-trip-infos">
+            <div>
+              <%= link_to cocktail_path(cocktail) do %>
+                  <h2><%= cocktail.name %></h2>
+                <% end %>
+            </div>
+            <p class="card-trip-pricing">$</p>
+            <p class="card-trip-pricing">Price</p>
+          </div>
+        </div>
+      <% end %>
+</div>

@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand"><h1>Misty Cocktails</h1></a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search a cocktail.." aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-outline-primary my-2 my-sm-0" %>
+  </form>
+</nav>
+
+<div class="alert alert-dark" role="alert">
+  <h1>Misty Cocktails</h1>
+</div>
+
+<div class="row">
+  <div class="col-8 offset-2">
+    <div class="list-group">
+      <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail_path(cocktail), class: "list-group-item list-group-item-action" do %>
+          <h2><%= cocktail.name %></h2>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
