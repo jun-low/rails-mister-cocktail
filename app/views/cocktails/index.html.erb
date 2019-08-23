@@ -1,20 +1,47 @@
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand"><h1>Misty Cocktails</h1></a>
+<nav class="navbar">
+  <h4><%= link_to "Misty Cocktails", cocktails_path %></h4>
   <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search a cocktail.." aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    <%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-outline-primary my-2 my-sm-0" %>
+    <input class="form-control mr-sm-2" type="search" placeholder=" Search a cocktail.." aria-label="Search" name="query" >
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </form>
 </nav>
 
-<div class="row">
-  <div class="col-8 offset-2">
-    <div class="list-group">
-      <% @cocktails.each do |cocktail| %>
-        <%= link_to cocktail_path(cocktail), class: "list-group-item list-group-item-action" do %>
-          <h2><%= cocktail.name %></h2>
-        <% end %>
-      <% end %>
+<div class="section-show">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0)), url(https://cdn.dribbble.com/users/3107060/screenshots/5997073/2cock.gif);">
+    <div class="container">
+      <h1>Misty cocktail brings <strong>amazing cocktails</strong> from <strong>fine ingredients</strong>!</h1>
+      <p>Change your life.</p>
+      <%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-outline-primary my-2 my-sm-0" %>
     </div>
   </div>
 </div>
+
+
+<div class="section-show">
+  <div class="cards-home-cocktail">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?cocktail&rand=<%= rand( 9999) %>)">
+        <%= cocktail.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This app is made with <i class="fas fa-heart"></i> at Melbourne
+  </div>
+</div>
+

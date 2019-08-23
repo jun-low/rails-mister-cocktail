@@ -1,15 +1,21 @@
 <div class="card-container">
-  <div class="card-cocktail">
-    <img src="https://source.unsplash.com/1600x900/?cocktail&rand=<%= rand( 9999) %>" />
-    <div class="card-cocktail-infos">
-      <div>
-        <%= link_to @cocktail do %>
-            <h2><%= @cocktail.name %></h2>
-          <% end %>
+  <h2><%= @cocktail.name %></h2>
+
+  <% @cocktail.doses.each do |dose|  %>
+    <div class="card-product">
+      <img src="https://source.unsplash.com/1600x900/?cocktail&alcohol=<%= rand( 9999) %>" />
+      <div class="card-product-infos">
+        <p>Dose: <%= dose.description %> -
+          <%= dose.ingredient.name %></p>
+          <%= link_to "Delete a dose", dose_path(dose), method: :delete, data: { confirm: "Are you sure to delete #{dose.ingredient.name} ?" }, class: 'btn btn-outline-primary'%>
       </div>
-      <p class="card-cocktail-pricing"><%= @cocktail.each |dose|.dose.description %></p>
-      <p class="card-cocktail-pricing"><%= @cocktail.ingredient.name %></p>
-      <%= link_to "Back to Home Page", cocktails_path, class: 'btn btn-outline-primary'%>
     </div>
-  </div>
+  <% end %>
 </div>
+  <div class="card-product-infos">
+    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-outline-primary'%>
+    <%= link_to "Back to Home Page", cocktails_path, class: 'btn btn-outline-primary'%>
+  </div>
+
+
+
