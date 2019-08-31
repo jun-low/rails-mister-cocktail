@@ -1,6 +1,5 @@
 <div class="card-container">
   <h2><%= @cocktail.name %></h2>
-
   <% @cocktail.doses.each do |dose|  %>
     <div class="card-product">
       <img src="https://source.unsplash.com/1600x900/?cocktail&alcohol=<%= rand( 9999) %>" />
@@ -14,6 +13,7 @@
 </div>
   <div class="card-product-infos">
     <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-outline-primary'%>
+    <%= link_to "Delete Cocktail", cocktail_path, method: :delete, data: { confirm: "Are you sure to delete #{@cocktail.name} ?" }, class: 'btn btn-outline-primary'%>
     <%= link_to "Back to Home Page", cocktails_path, class: 'btn btn-outline-primary'%>
   </div>
 
