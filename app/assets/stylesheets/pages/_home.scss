@@ -3,10 +3,12 @@ body {
 background: #F8F3F0;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to top, #FFFFFF, #F8F3F0);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to top, #FFFFFF, #F8F3F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 font-family: 'Livvic', sans-serif;
+display: flex;
+flex-direction: column;
+height: 100vh;
 }
 
 .section-show {
-  height: 100vh;
+  flex: 1 0 auto;
 }
