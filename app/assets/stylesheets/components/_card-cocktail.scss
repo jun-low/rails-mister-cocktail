@@ -1,9 +1,11 @@
 .card-container {
-  margin: 0 auto;
   padding: 32px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 
   h2 {
-    font-family: 'Berkshire Swash', cursive;
+    font-family: 'Allura', cursive;
     text-align: center;
   }
 }
@@ -39,10 +41,11 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-family: 'Livvic', sans-serif;
+  font-family: 'Rouge Script';
+  letter-spacing: 2px;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }

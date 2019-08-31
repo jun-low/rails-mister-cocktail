@@ -1,12 +1,10 @@
-
-<div class="card-container">
+<div class="card-container m-auto p-5">
   <h1>Add your Cocktail!</h1>
   <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name %>
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit "Add cocktail", class: "btn btn-primary" %>
-    <%= f.button :button, 'Cancel', type: :reset, class: 'btn btn-danger' %>
-    <%= link_to "Back to Home Page", cocktails_path, class: 'btn btn-outline-primary'%>
+    <%= f.submit "Add cocktail", class: "btn btn-danger" %>
+    <%= f.button :button, 'Cancel', type: :reset, class: 'btn btn-primary' %>
   <% end %>
 </div>

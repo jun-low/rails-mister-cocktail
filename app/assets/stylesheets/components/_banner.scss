@@ -1,27 +1,32 @@
 .banner {
   background-size: cover;
-  background-attachment: fixed;
   height: 100vh;
-  padding: 250px 0;
-  background-position-y: 56px;
-  background-position-x: 193px;
+  padding: 250px 80px;
+  display:flex;
+  align-items: center;
+  flex-direction: columns;
+  justify-content: center;
+
+  img {
+    height: 400px;
+    background-attachment: fixed;
+  }
 
   h1 {
-    margin: 0;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-    font-size: 32px;
+    color: rgba(0,0,0,0.8);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-size: 48px;
     font-weight: bold;
-    font-family: 'Berkshire Swash', cursive;
-    width: 50%;
+    width: 600px;
+    font-family: 'Rouge Script', cursive;
   }
 
    p {
-    font-size: 20px;
-    color: white;
+    font-size: 28px;
+    color: black;
     opacity: .7;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-    font-family: 'Berkshire Swash', cursive;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    font-family: 'Rouge Script', cursive;
   }
 }
 
