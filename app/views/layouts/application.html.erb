@@ -13,8 +13,27 @@
   </head>
 
   <body>
+    <nav class="navbar">
+      <h4><%= link_to "Misty Cocktails", cocktails_path %></h4>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder=" Search a cocktail.." aria-label="Search" name="query" >
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </form>
+    </nav>
+
     <%= yield %>
 
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-copyright">
+        This app is made with <i class="fas fa-heart"></i> at Melbourne
+      </div>
+    </div>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>

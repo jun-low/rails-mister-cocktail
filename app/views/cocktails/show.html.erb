@@ -1,9 +1,10 @@
-<div class="card-container">
+<div class="card-container text-center">
   <h2><%= @cocktail.name %></h2>
+  <br>
+  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
   <% @cocktail.doses.each do |dose|  %>
     <div class="card-product">
-      <img src="https://source.unsplash.com/1600x900/?cocktail&alcohol=<%= rand( 9999) %>" />
       <div class="card-product-infos">
         <p>Dose: <%= dose.description %> -
           <%= dose.ingredient.name %></p>
@@ -12,7 +13,7 @@
     </div>
   <% end %>
 </div>
-  <div class="card-product-infos">
+  <div class="card-product-infos text-center">
     <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-outline-primary'%>
     <%= link_to "Back to Home Page", cocktails_path, class: 'btn btn-outline-primary'%>
   </div>
